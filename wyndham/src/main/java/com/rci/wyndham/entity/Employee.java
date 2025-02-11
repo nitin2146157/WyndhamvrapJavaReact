@@ -1,4 +1,4 @@
-package com.rci.wyndham.model;
+package com.rci.wyndham.entity;
  
 import jakarta.persistence.*;
  
