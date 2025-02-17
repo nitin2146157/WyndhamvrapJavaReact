@@ -1,5 +1,6 @@
 package com.rci.wyndham.service;
 
+import com.rci.wyndham.entity.NabDirectPostTransactions;
 import com.rci.wyndham.model.Payment;
 public interface TransactionService {
 

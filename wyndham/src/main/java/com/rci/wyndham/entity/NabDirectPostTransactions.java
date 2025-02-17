@@ -1,6 +1,9 @@
 package com.rci.wyndham.entity;
 
+
+
 import jakarta.persistence.*;
+import org.springframework.util.StringUtils;
 
 
 import java.util.Date;
@@ -132,9 +135,8 @@ public class NabDirectPostTransactions implements Cloneable {
     }
 
     public String getCurrency() {
-        currency) {
-            this.currency = currency;
-        }
+        return currency;
+    }
 
         public String getTimeStamp() {
             return timeStamp;
