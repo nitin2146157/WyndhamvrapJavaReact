@@ -3,7 +3,7 @@ package com.rci.wyndham.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.rci.wyndham.model.Employee;
+import com.rci.wyndham.entity.Employee;
 import com.rci.wyndham.repository.EmployeeRepository;
 
 import java.util.List;

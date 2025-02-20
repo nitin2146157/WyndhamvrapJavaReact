@@ -3,20 +3,35 @@ package com.rci.wyndham.serviceimpl;
 
 import com.rci.wyndham.entity.NabDirectPostTransactions;
 import com.rci.wyndham.enums.PaymentSourceSystemEnum;
+import com.rci.wyndham.enums.TransactionDecisionEnum;
+import com.rci.wyndham.hub.HubServiceFactory;
 import com.rci.wyndham.model.BaseObject;
 import com.rci.wyndham.model.Payment;
 import com.rci.wyndham.service.NabDirectPostTransactionsService;
 import com.rci.wyndham.service.PaymentService;
 import com.rci.wyndham.service.PaymentServiceFactory;
+import com.rci.wyndham.service.TemplateService;
 import com.rci.wyndham.service.TransactionService;
+import com.rci.wyndham.util.WVRAPUtil;
+import com.wyn.hub.client.model.EmailMessage;
+import com.wyn.hub.client.model.EmailRecipient;
+import com.wyn.hub.client.model.EmailResponse;
+import com.wyn.hub.client.service.MailerService;
+import com.wyn.util.WynDateUtil;
+import com.wyn.util.WynMoneyUtil;
+
 import jakarta.transaction.Transactional;
+
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 /**
