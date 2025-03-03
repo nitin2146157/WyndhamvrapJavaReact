@@ -6,13 +6,15 @@ import com.rci.wyndham.model.BaseObject;
 import com.rci.wyndham.service.PaymentSystemService;
 import org.apache.commons.codec.binary.StringUtils;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 
 import java.net.http.HttpHeaders;
 import java.util.Collections;
 import java.util.List;
 
-Public class PaymentSystemServiceImpl extends BaseObject implements PaymentSystemService {
+@Service
+public class PaymentSystemServiceImpl extends BaseObject implements PaymentSystemService {
 
     public static final String EXPRESS_CHECK_IN = "EXPRESS_CHECK_IN";
     public static final String EXPRESS_CHECK_IN_CREATED_BY = "EXPRESS_CHECK_IN_REGISTRATION";

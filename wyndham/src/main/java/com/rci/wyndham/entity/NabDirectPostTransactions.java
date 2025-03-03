@@ -76,6 +76,10 @@ public class NabDirectPostTransactions implements Cloneable {
     @Column(name = "modified_ts")
     private Date modifiedTs;
 
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
     @Column(name = "reference", nullable = false)
     private String reference;
 

@@ -1,6 +1,8 @@
 package com.rci.wyndham.repository;
 
+import com.rci.wyndham.entity.PaymentCurrency;
 import com.rci.wyndham.entity.PaymentGatewayConfig;
+import com.rci.wyndham.entity.PaymentType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -19,4 +21,4 @@ public interface PaymentGatewayConfigRepository extends JpaRepository<PaymentGat
 
     PaymentGatewayConfig findFirstByPaymentTypeAndTransactionType(PaymentType paymentType, String transactionType);
 }
-}
+

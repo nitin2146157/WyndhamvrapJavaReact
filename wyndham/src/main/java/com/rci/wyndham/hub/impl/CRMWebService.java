@@ -1,5 +1,6 @@
 package com.rci.wyndham.hub.impl;
 
+import com.wyn.hub.client.service.CRMService;
 import org.apache.commons.codec.binary.Base64;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

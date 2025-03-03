@@ -112,7 +112,7 @@ public class TransactionServiceImpl extends BaseObject implements TransactionSer
      */
     @Transactional
     @Override
-    public NabDirectPostTransactions updateTransaction(String transactionUuid, String reasonCode, TransactionDecisionEnum decision, String transactionId, String authTime,
+    public NabDirectPostTransactions updateTransaction (String transactionUuid, String reasonCode, TransactionDecisionEnum decision, String transactionId, String authTime,
                                                        String authCode, String pan, String expiryDate) {
         LOGGER.info("updating transaction id:" + transactionUuid);
         LOGGER.info("reason code >> " + reasonCode);
